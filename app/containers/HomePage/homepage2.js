@@ -21,20 +21,15 @@ import {
 } from "containers/App/selectors";
 import H2 from "components/H2";
 import NavBar from "components/Navbar";
-import Homepage2 from "./homepage2.js";
-import "../../styles/home.css";
+// import "../../styles/home2.css";
 
 const key = "home";
-function HomePage() {
+function Homepage2() {
   return (
-    <div className="homepage">
-      <NavBar />
-      <h1 style={{ width: "300px", margin: "100px 80px", fontWeight: "600" }}>
-        Introducing 10+ upgrades across our entire service
-      </h1>
-      <Homepage2 />
+    <div className="homepage2">
+      <H2>Explore nearby</H2>
     </div>
   );
 }
 
-export default HomePage;
+export default Homepage2;
