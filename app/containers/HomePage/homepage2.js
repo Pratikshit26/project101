@@ -22,9 +22,11 @@ import {
 } from "containers/App/selectors";
 import H2 from "components/H2";
 import NavBar from "components/Navbar";
-// import "../../styles/home2.css";
+import { Input, Space } from "antd";
+import "../../styles/home2.css";
 
 const { Meta } = Card;
+const { Search } = Input;
 
 function Homepage2() {
   const [lon, setLon] = React.useState("");
@@ -42,30 +44,41 @@ function Homepage2() {
       className="homepage2"
       style={{ marginTop: "150px", padding: "0px 70px" }}
     >
-      <H2>Explore nearby</H2>
-      <p>
-        Your current position is <strong>{lat} latitude</strong>{" "}
+      <H2 style={{ color: "white" }}>Explore nearby</H2>
+      <p style={{ color: "white  " }}>
+        Your current position is <strong>{lat} latitude</strong> and
         <strong>{lon} longitude</strong>
       </p>
-      <H2>Live anywhere</H2>
+      <H2 style={{ color: "white  " }}>Live anywhere</H2>
 
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           borderradius: "12px",
         }}
       >
         {data.map((d) => (
           <Card
             hoverable
-            style={{ width: 300, borderRadius: "10px" }}
+            style={{ width: 400, borderRadius: "10px" }}
             cover={<img src={d.image} style={{ borderRadius: "10px" }} />}
             key={d.id}
           >
             <Meta title={d.type} />
           </Card>
         ))}
+      </div>
+      <div>
+        <h1>Hungry ?</h1>
+        <p>Order your local favourites</p>
+        <Search
+          placeholder="Search your local restaurents"
+          allowClear
+          enterButton="Search"
+          size="large"
+          style={{ width: 650,marginBottom:"100px"}}
+        />
       </div>
     </div>
   );

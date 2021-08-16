@@ -29,7 +29,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <NavBar />
-      <h1 style={{ width: "300px", margin: "100px 80px", fontWeight: "600" }}>
+      <h1 style={{ width: "300px", margin: "100px 80px", fontWeight: "600",color:"white" }}>
         Introducing 10+ upgrades across our entire service
       </h1>
       <Homepage2 />
